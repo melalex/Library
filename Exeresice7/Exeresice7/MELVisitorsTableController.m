@@ -17,8 +17,14 @@
 #import <Cocoa/Cocoa.h>
 
 @interface MELVisitorsTableController() <NSTableViewDataSource, NSTableViewDelegate>
+{
+@private
+    MELVisitorWindowController *_visitorWindow;
+}
 
 @property (assign) IBOutlet NSTableView *visitorTableView;
+
+@property (readonly) MELVisitorWindowController *visitorWindow;
 
 @end
 
@@ -26,8 +32,20 @@
 
 - (void)awakeFromNib
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(update)
+                                                 name:kMELLibraryDidChangeNotification
+                                               object:nil];
+
     [_visitorTableView setTarget:self];
     [self.visitorTableView setDoubleAction:@selector(doubleClickHandler)];
+}
+
+- (void)dealloc
+{
+    [_visitorWindow release];
+    
+    [super dealloc];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
@@ -62,10 +80,9 @@
 
 - (void)doubleClickHandler
 {
-    MELVisitorWindowController *controller = [[MELVisitorWindowController alloc]
-                                              initWithWindowNibName:@"MELVisitorWindowController"
-                                              visitor:[MELLibrarySingleton.sharedInstance.library.visitors objectAtIndex:self.visitorTableView.clickedRow]];
-    [controller showWindow:nil];
+    self.visitorWindow.visitor = [MELLibrarySingleton.sharedInstance.library.visitors objectAtIndex:self.visitorTableView.clickedRow];
+    
+    [self.visitorWindow showWindow:nil];
 }
 
 
@@ -82,6 +99,21 @@
 - (IBAction)yearFinishEditing:(id)sender
 {
     [(MELVisitor *)[MELLibrarySingleton.sharedInstance.library.visitors objectAtIndex:self.visitorTableView.selectedRow] setYearOfBirth:[[(NSTextField *)sender stringValue] intValue]];
+}
+
+- (void)update
+{
+    [self.visitorTableView reloadData];
+}
+
+- (MELVisitorWindowController *)visitorWindow
+{
+    if (_visitorWindow == nil)
+    {
+        _visitorWindow = [[MELVisitorWindowController alloc]
+                         initWithWindowNibName:@"MELVisitorWindowController"];
+    }
+    return _visitorWindow;
 }
 
 @end

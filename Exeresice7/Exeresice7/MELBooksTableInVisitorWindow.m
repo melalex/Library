@@ -14,17 +14,33 @@
 #import "Constants.h"
 #import "MELCellWithButton.h"
 #import "MELCellWithComboBox.h"
+#import "MELVisitorWindowController.h"
 
 #import <Cocoa/Cocoa.h>
 
 @interface MELBooksTableInVisitorWindow() <NSTableViewDataSource, NSTableViewDelegate>
 
-@property (assign) IBOutlet NSScrollView *booksTable;
+@property (assign) IBOutlet NSTableView *booksTableView;
+
 
 @end
 
 
 @implementation MELBooksTableInVisitorWindow
+
+- (void)awakeFromNib
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(update)
+                                                 name:kMELLibraryDidChangeNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(update)
+                                                 name:kMELVisitorWindowControllerDidChangeVisitorNotification
+                                               object:nil];
+}
+
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
@@ -44,7 +60,7 @@
     else if ([tableColumn.identifier isEqualToString:kBookAuthorIdentifier])
     {
         result = [tableView makeViewWithIdentifier:kBookAuthorFromVisitorWindowCellWithTextIdentifier owner:self];
-        result.textField.stringValue = [[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] name];
+        result.textField.stringValue = [[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] author];
     }
     else if ([tableColumn.identifier isEqualToString:kBookTypeIdentifier])
     {
@@ -65,7 +81,21 @@
     {
         MELCellWithButton *cellWithButton = [tableView makeViewWithIdentifier:kBookOwnerFromVisitorWindowCellWithButtonIdentifier owner:self];
         
-        
+        if ([(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] owner] == nil)
+        {
+            [cellWithButton.button setEnabled:YES];
+            [cellWithButton.button  setTitle:@"Take"];
+        }
+        else if ([(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] owner]== [(MELVisitorWindowController *)[[self.booksTableView window] windowController] visitor])
+        {
+            [cellWithButton.button setEnabled:YES];
+            [cellWithButton.button  setTitle:@"Return"];
+        }
+        else if ([(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] owner]!= nil)
+        {
+            [cellWithButton.button setEnabled:NO];
+            [cellWithButton.button  setTitle:@"Return"];
+        }
         
         result = cellWithButton;
 
@@ -74,5 +104,47 @@
     return result;
 }
 
+- (IBAction)titleFinishedEditing:(id)sender
+{
+    [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:self.booksTableView.selectedRow] setName:[(NSTextField *)sender stringValue]];
+}
+
+- (IBAction)authorFinishEditing:(id)sender
+{
+    [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:self.booksTableView.selectedRow] setAuthor:[(NSTextField *)sender stringValue]];
+}
+
+- (IBAction)typeFinishEditing:(id)sender
+{
+    NSInteger selectedItemIndex = [(NSPopUpButton *)sender indexOfSelectedItem];
+    
+    if (selectedItemIndex == 0)
+    {
+        [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:[self.booksTableView rowForView:sender]] setBookType:kMELBookTypePaperback];
+    }
+    else if (selectedItemIndex == 1)
+    {
+        [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:[self.booksTableView rowForView:sender]] setBookType:kMELBookTypeHadrcover];
+    }
+}
+
+- (IBAction)ownerFinishEditing:(id)sender
+{
+    MELBook *book = (MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:[self.booksTableView rowForView:sender]];
+    
+    if ([[(NSButton *)sender title] isEqualToString:@"Return"])
+    {
+        [book.owner returnBook:book];
+    }
+    else if ([[(NSButton *)sender title] isEqualToString:@"Take"])
+    {
+        [[(MELVisitorWindowController *)[[self.booksTableView window] windowController] visitor] takeBook:book];
+    }
+}
+
+- (void)update
+{
+    [self.booksTableView reloadData];
+}
 
 @end

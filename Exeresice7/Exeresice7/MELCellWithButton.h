@@ -10,4 +10,6 @@
 
 @interface MELCellWithButton : NSTableCellView
 
+@property (assign) IBOutlet NSButton *button;
+ 
 @end

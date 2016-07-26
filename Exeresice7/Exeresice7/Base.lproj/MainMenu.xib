@@ -943,13 +943,13 @@
                                                         <popUpButton verticalHuggingPriority="750" id="2XZ-cb-FC3">
                                                             <rect key="frame" x="1" y="-5" width="118" height="26"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="PuA-Xx-td8" id="y4N-s3-q41">
+                                                            <popUpButtonCell key="cell" type="push" title="Item 2" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="6my-c1-QhY" id="y4N-s3-q41">
                                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="menu"/>
                                                                 <menu key="menu" id="g1m-TX-3tW">
                                                                     <items>
-                                                                        <menuItem state="on" id="PuA-Xx-td8"/>
-                                                                        <menuItem title="Item 2" id="6my-c1-QhY"/>
+                                                                        <menuItem id="PuA-Xx-td8"/>
+                                                                        <menuItem title="Item 2" state="on" id="6my-c1-QhY"/>
                                                                         <menuItem title="Item 3" id="w5V-mU-rLD"/>
                                                                     </items>
                                                                 </menu>

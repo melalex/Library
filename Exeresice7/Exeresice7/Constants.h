@@ -32,4 +32,19 @@ static NSString *const kBookAuthorIdentifier = @"BookAuthor";
 static NSString *const kBookTypeIdentifier = @"BookType";
 static NSString *const kBookOwnerIdentifier = @"BookOwner";
 
+static NSString *const kMELBookDidChangeTypeNotification = @"MELBookDidChangeTypeNotification";
+static NSString *const kMELBookDidChangeTitleNotification = @"MELBookDidChangeTitleNotification";
+static NSString *const kMELBookDidAuthrNotification = @"MELBookDidAuthrNotification";
+
+
+static NSString *const kMELVisitorDidChangeNameNotification = @"MELVisitorDidChangeNameNotification";
+static NSString *const kMELVisitorDidChangeSurnameNotification = @"MELVisitorDidChangeSurnameNotification";
+static NSString *const kMELVisitorDidChangeYearOfBirthNotification = @"MELVisitorDidChangeYearOfBirthNotification";
+static NSString *const kMELVisitorDidTakeBookNotification = @"MELVisitorDidTakeBookNotification";
+static NSString *const kMELVisitorDidReturnBookNotification = @"MELVisitorDidReturnBookNotification";
+
+static NSString *const kMELLibraryDidChangeNotification = @"MELLibraryDidChangeNotification";
+
+static NSString *const kMELVisitorWindowControllerDidChangeVisitorNotification = @"MELVisitorWindowControllerDidChangeVisitorNotification";
+
 #endif /* Constants_h */

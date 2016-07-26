@@ -15,7 +15,7 @@
         </customObject>
         <customObject id="FIx-Ph-wFm" customClass="MELBooksTableInVisitorWindow">
             <connections>
-                <outlet property="booksTable" destination="ug5-9H-XjR" id="kAg-57-1Yb"/>
+                <outlet property="booksTableView" destination="Gb8-T2-bJk" id="nae-VW-VEE"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -61,11 +61,14 @@
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bwu-gN-fRZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="17"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="560-Dg-Wyj">
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="560-Dg-Wyj">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <action selector="titleFinishedEditing:" target="FIx-Ph-wFm" id="cEy-uH-AGy"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <connections>
@@ -93,11 +96,14 @@
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNn-dV-nq5">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="17"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Ofn-wm-6z3">
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="Ofn-wm-6z3">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <action selector="authorFinishEditing:" target="FIx-Ph-wFm" id="NpL-Rp-E0l"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <connections>
@@ -125,17 +131,20 @@
                                                     <subviews>
                                                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-vz-xbJ">
                                                             <rect key="frame" x="1" y="-5" width="119" height="26"/>
-                                                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="lmf-hM-tm5" id="wV1-WN-cjj">
+                                                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="wV1-WN-cjj">
                                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="menu"/>
                                                                 <menu key="menu" id="2Sa-QB-uZz">
                                                                     <items>
-                                                                        <menuItem title="Item 1" state="on" id="lmf-hM-tm5"/>
+                                                                        <menuItem title="Item 1" id="lmf-hM-tm5"/>
                                                                         <menuItem title="Item 2" id="svP-1f-tmc"/>
                                                                         <menuItem title="Item 3" id="Z3h-c9-jFb"/>
                                                                     </items>
                                                                 </menu>
                                                             </popUpButtonCell>
+                                                            <connections>
+                                                                <action selector="typeFinishEditing:" target="FIx-Ph-wFm" id="z3P-wD-SCu"/>
+                                                            </connections>
                                                         </popUpButton>
                                                     </subviews>
                                                     <connections>
@@ -162,14 +171,18 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-cK-bHg">
-                                                            <rect key="frame" x="19" y="-8" width="81" height="32"/>
+                                                            <rect key="frame" x="-3" y="-8" width="115" height="32"/>
                                                             <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sNw-Ee-1Ug">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system"/>
                                                             </buttonCell>
+                                                            <connections>
+                                                                <action selector="ownerFinishEditing:" target="FIx-Ph-wFm" id="5as-SU-BB6"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <connections>
+                                                        <outlet property="button" destination="Vgp-cK-bHg" id="9D7-gr-YwV"/>
                                                         <outlet property="nextKeyView" destination="Vgp-cK-bHg" id="aTk-vl-5av"/>
                                                     </connections>
                                                 </tableCellView>
@@ -234,6 +247,9 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <action selector="yearFinishEditing:" target="-2" id="tss-Tp-NVM"/>
+                        </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THK-pK-bWA">
                         <rect key="frame" x="18" y="218" width="40" height="17"/>

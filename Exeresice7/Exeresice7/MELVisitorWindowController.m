@@ -8,16 +8,19 @@
 
 #import "MELVisitorWindowController.h"
 #import "MELVisitor.h"
+#import "Constants.h"
 
 @interface MELVisitorWindowController ()
 {
 @private
     NSTextField *_nameTextField;
+    MELVisitor *_visitor;
 }
 
 @property (assign) IBOutlet NSTextField *nameTextField;
 @property (assign) IBOutlet NSTextField *surnameTextField;
 @property (assign) IBOutlet NSTextField *yearTextField;
+
 
 @end
 
@@ -30,17 +33,6 @@
     _yearTextField.stringValue = [@(_visitor.yearOfBirth) description];
     
     [super windowDidLoad];
-}
-
-- (instancetype)initWithWindowNibName:(NSString *)windowNibName visitor:(MELVisitor *)visitor
-{
-    if (self = [super initWithWindowNibName:windowNibName])
-    {
-        [visitor retain];
-        _visitor = visitor;
-        
-    }
-    return self;
 }
 
 - (void)dealloc
@@ -62,12 +54,38 @@
 
 - (IBAction)nameFinishEditing:(id)sender
 {
-    
+    self.visitor.name = self.nameTextField.stringValue;
 }
 
 - (IBAction)surnameFinishEditing:(id)sender
 {
+    self.visitor.lastName = self.surnameTextField.stringValue;
 }
 
+- (IBAction)yearFinishEditing:(id)sender
+{
+    self.visitor.yearOfBirth = [self.nameTextField.stringValue integerValue];
+}
+
+- (void)setVisitor:(MELVisitor *)visitor
+{
+    if (_visitor != visitor)
+    {
+        [_visitor release];
+        _visitor = visitor;
+        [_visitor retain];
+        
+        _nameTextField.stringValue = _visitor.name;
+        _surnameTextField.stringValue = _visitor.lastName;
+        _yearTextField.stringValue = [@(_visitor.yearOfBirth) description];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:kMELVisitorWindowControllerDidChangeVisitorNotification object:nil];
+    }
+}
+
+- (MELVisitor *)visitor
+{
+    return _visitor;
+}
 
 @end

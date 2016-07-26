@@ -12,9 +12,6 @@
 
 @interface MELVisitorWindowController : NSWindowController
 
-@property (retain, readonly) MELVisitor *visitor;
-
-- (instancetype)initWithWindowNibName:(NSString *)windowNibName visitor:(MELVisitor *)visitor;
-
+@property (retain) MELVisitor *visitor;
 
 @end

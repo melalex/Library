@@ -30,6 +30,10 @@
 
 - (void)awakeFromNib
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(update)
+                                                 name:kMELLibraryDidChangeNotification
+                                               object:nil];
     [_booksTableView setTarget:self];
     [self.booksTableView setDoubleAction:@selector(doubleClickHandler)];
 }
@@ -47,7 +51,7 @@
     else if ([tableColumn.identifier isEqualToString:kBookAuthorIdentifier])
     {
         result = [tableView makeViewWithIdentifier:kBookAuthorCellWithTextIdentifier owner:self];
-        result.textField.stringValue = [[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] name];
+        result.textField.stringValue = [[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] author];
     }
     else if ([tableColumn.identifier isEqualToString:kBookTypeIdentifier])
     {
@@ -66,8 +70,11 @@
     }
     else if ([tableColumn.identifier isEqualToString:kBookOwnerIdentifier])
     {
+        MELVisitor *owner = [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] owner];
+        
         result = [tableView makeViewWithIdentifier:kBookOwnerCellWithTextIdentifier owner:self];
-        result.textField.stringValue = [[[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row] owner] fullName];
+        
+        result.textField.stringValue = owner != nil ? owner.fullName : @"";
     }
 
     return result;
@@ -80,17 +87,31 @@
 
 - (IBAction)authorFinishEditing:(id)sender
 {
-//    [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:self.booksTableView.selectedRow] setLastName:[(NSTextField *)sender stringValue]];
+    [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:self.booksTableView.selectedRow] setAuthor:[(NSTextField *)sender stringValue]];
 }
 
 - (IBAction)typeFinishEditing:(id)sender
 {
+    NSInteger selectedItemIndex = [(NSPopUpButton *)sender indexOfSelectedItem];
     
+    if (selectedItemIndex == 0)
+    {
+        [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:[self.booksTableView rowForView:sender]] setBookType:kMELBookTypePaperback];
+    }
+    else if (selectedItemIndex == 1)
+    {
+        [(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:[self.booksTableView rowForView:sender]] setBookType:kMELBookTypeHadrcover];
+    }
 }
 
 - (void)doubleClickHandler
 {
+    
+}
 
+- (void)update
+{
+    [self.booksTableView reloadData];
 }
 
 
