@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD4C94521D40E917003F2075 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94511D40E917003F2075 /* AppDelegate.m */; };
+		DD4C94551D40E917003F2075 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94541D40E917003F2075 /* main.m */; };
+		DD4C94571D40E917003F2075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD4C94561D40E917003F2075 /* Assets.xcassets */; };
+		DD4C945A1D40E917003F2075 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4C94581D40E917003F2075 /* MainMenu.xib */; };
+		DD4C94651D40E917003F2075 /* Exeresice7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94641D40E917003F2075 /* Exeresice7Tests.m */; };
+		DD4C94701D40E917003F2075 /* Exeresice7UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C946F1D40E917003F2075 /* Exeresice7UITests.m */; };
+		DD4C948D1D40EA28003F2075 /* MELBook.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C947F1D40EA28003F2075 /* MELBook.m */; };
+		DD4C948E1D40EA28003F2075 /* MELBook+MELSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94811D40EA28003F2075 /* MELBook+MELSerialization.m */; };
+		DD4C948F1D40EA28003F2075 /* MELLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94831D40EA28003F2075 /* MELLibrary.m */; };
+		DD4C94901D40EA28003F2075 /* MELLibrary+MELSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94851D40EA28003F2075 /* MELLibrary+MELSerialization.m */; };
+		DD4C94911D40EA28003F2075 /* MELVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94881D40EA28003F2075 /* MELVisitor.m */; };
+		DD4C94921D40EA28003F2075 /* MELVisitor+MELSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C948A1D40EA28003F2075 /* MELVisitor+MELSerialization.m */; };
+		DD4C94931D40EA28003F2075 /* NSArray+MELEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C948C1D40EA28003F2075 /* NSArray+MELEquality.m */; };
+		DD4C94A51D424EBF003F2075 /* MELVisitorsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94A41D424EBF003F2075 /* MELVisitorsTableController.m */; };
+		DD4C94A81D424EE2003F2075 /* MELBooksTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94A71D424EE2003F2075 /* MELBooksTableController.m */; };
+		DD4C94AC1D4273F1003F2075 /* MELLibrarySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94AB1D4273F1003F2075 /* MELLibrarySingleton.m */; };
+		DD4C94AF1D42958B003F2075 /* MELCellWithComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94AE1D42958B003F2075 /* MELCellWithComboBox.m */; };
+		DD4C94B91D466309003F2075 /* MELVisitorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94B71D466309003F2075 /* MELVisitorWindowController.m */; };
+		DD4C94BA1D466309003F2075 /* MELVisitorWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4C94B81D466309003F2075 /* MELVisitorWindowController.xib */; };
+		DD4C94C51D467BC2003F2075 /* MELBooksTableInVisitorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94C41D467BC2003F2075 /* MELBooksTableInVisitorWindow.m */; };
+		DD4C94C81D467DFF003F2075 /* MELCellWithButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4C94C71D467DFF003F2075 /* MELCellWithButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD4C94611D40E917003F2075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD4C94451D40E917003F2075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD4C944C1D40E917003F2075;
+			remoteInfo = Exeresice7;
+		};
+		DD4C946C1D40E917003F2075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD4C94451D40E917003F2075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD4C944C1D40E917003F2075;
+			remoteInfo = Exeresice7;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD4C944D1D40E917003F2075 /* Exeresice7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exeresice7.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4C94501D40E917003F2075 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD4C94511D40E917003F2075 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD4C94541D40E917003F2075 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD4C94561D40E917003F2075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD4C94591D40E917003F2075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DD4C945B1D40E917003F2075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD4C94601D40E917003F2075 /* Exeresice7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exeresice7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4C94641D40E917003F2075 /* Exeresice7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Exeresice7Tests.m; sourceTree = "<group>"; };
+		DD4C94661D40E917003F2075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD4C946B1D40E917003F2075 /* Exeresice7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exeresice7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4C946F1D40E917003F2075 /* Exeresice7UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Exeresice7UITests.m; sourceTree = "<group>"; };
+		DD4C94711D40E917003F2075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD4C947E1D40EA28003F2075 /* MELBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MELBook.h; path = "../../../MyBook Exercise 4/MyBook/MELBook.h"; sourceTree = "<group>"; };
+		DD4C947F1D40EA28003F2075 /* MELBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MELBook.m; path = "../../../MyBook Exercise 4/MyBook/MELBook.m"; sourceTree = "<group>"; };
+		DD4C94801D40EA28003F2075 /* MELBook+MELSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MELBook+MELSerialization.h"; path = "../../../MyBook Exercise 4/MyBook/MELBook+MELSerialization.h"; sourceTree = "<group>"; };
+		DD4C94811D40EA28003F2075 /* MELBook+MELSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MELBook+MELSerialization.m"; path = "../../../MyBook Exercise 4/MyBook/MELBook+MELSerialization.m"; sourceTree = "<group>"; };
+		DD4C94821D40EA28003F2075 /* MELLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MELLibrary.h; path = "../../../MyBook Exercise 4/MyBook/MELLibrary.h"; sourceTree = "<group>"; };
+		DD4C94831D40EA28003F2075 /* MELLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MELLibrary.m; path = "../../../MyBook Exercise 4/MyBook/MELLibrary.m"; sourceTree = "<group>"; };
+		DD4C94841D40EA28003F2075 /* MELLibrary+MELSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MELLibrary+MELSerialization.h"; path = "../../../MyBook Exercise 4/MyBook/MELLibrary+MELSerialization.h"; sourceTree = "<group>"; };
+		DD4C94851D40EA28003F2075 /* MELLibrary+MELSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MELLibrary+MELSerialization.m"; path = "../../../MyBook Exercise 4/MyBook/MELLibrary+MELSerialization.m"; sourceTree = "<group>"; };
+		DD4C94861D40EA28003F2075 /* MELSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MELSerializable.h; path = "../../../MyBook Exercise 4/MyBook/MELSerializable.h"; sourceTree = "<group>"; };
+		DD4C94871D40EA28003F2075 /* MELVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MELVisitor.h; path = "../../../MyBook Exercise 4/MyBook/MELVisitor.h"; sourceTree = "<group>"; };
+		DD4C94881D40EA28003F2075 /* MELVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MELVisitor.m; path = "../../../MyBook Exercise 4/MyBook/MELVisitor.m"; sourceTree = "<group>"; };
+		DD4C94891D40EA28003F2075 /* MELVisitor+MELSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MELVisitor+MELSerialization.h"; path = "../../../MyBook Exercise 4/MyBook/MELVisitor+MELSerialization.h"; sourceTree = "<group>"; };
+		DD4C948A1D40EA28003F2075 /* MELVisitor+MELSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MELVisitor+MELSerialization.m"; path = "../../../MyBook Exercise 4/MyBook/MELVisitor+MELSerialization.m"; sourceTree = "<group>"; };
+		DD4C948B1D40EA28003F2075 /* NSArray+MELEquality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+MELEquality.h"; path = "../../../MyBook Exercise 4/MyBook/NSArray+MELEquality.h"; sourceTree = "<group>"; };
+		DD4C948C1D40EA28003F2075 /* NSArray+MELEquality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MELEquality.m"; path = "../../../MyBook Exercise 4/MyBook/NSArray+MELEquality.m"; sourceTree = "<group>"; };
+		DD4C94A31D424EBF003F2075 /* MELVisitorsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELVisitorsTableController.h; sourceTree = "<group>"; };
+		DD4C94A41D424EBF003F2075 /* MELVisitorsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELVisitorsTableController.m; sourceTree = "<group>"; };
+		DD4C94A61D424EE2003F2075 /* MELBooksTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELBooksTableController.h; sourceTree = "<group>"; };
+		DD4C94A71D424EE2003F2075 /* MELBooksTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELBooksTableController.m; sourceTree = "<group>"; };
+		DD4C94A91D426AC0003F2075 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DD4C94AA1D4273F1003F2075 /* MELLibrarySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELLibrarySingleton.h; sourceTree = "<group>"; };
+		DD4C94AB1D4273F1003F2075 /* MELLibrarySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELLibrarySingleton.m; sourceTree = "<group>"; };
+		DD4C94AD1D42958B003F2075 /* MELCellWithComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELCellWithComboBox.h; sourceTree = "<group>"; };
+		DD4C94AE1D42958B003F2075 /* MELCellWithComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELCellWithComboBox.m; sourceTree = "<group>"; };
+		DD4C94B61D466309003F2075 /* MELVisitorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELVisitorWindowController.h; sourceTree = "<group>"; };
+		DD4C94B71D466309003F2075 /* MELVisitorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELVisitorWindowController.m; sourceTree = "<group>"; };
+		DD4C94B81D466309003F2075 /* MELVisitorWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MELVisitorWindowController.xib; sourceTree = "<group>"; };
+		DD4C94C31D467BC2003F2075 /* MELBooksTableInVisitorWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELBooksTableInVisitorWindow.h; sourceTree = "<group>"; };
+		DD4C94C41D467BC2003F2075 /* MELBooksTableInVisitorWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELBooksTableInVisitorWindow.m; sourceTree = "<group>"; };
+		DD4C94C61D467DFF003F2075 /* MELCellWithButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELCellWithButton.h; sourceTree = "<group>"; };
+		DD4C94C71D467DFF003F2075 /* MELCellWithButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELCellWithButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD4C944A1D40E917003F2075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4C945D1D40E917003F2075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4C94681D40E917003F2075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD4C94441D40E917003F2075 = {
+			isa = PBXGroup;
+			children = (
+				DD4C944F1D40E917003F2075 /* Exeresice7 */,
+				DD4C94631D40E917003F2075 /* Exeresice7Tests */,
+				DD4C946E1D40E917003F2075 /* Exeresice7UITests */,
+				DD4C944E1D40E917003F2075 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD4C944E1D40E917003F2075 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C944D1D40E917003F2075 /* Exeresice7.app */,
+				DD4C94601D40E917003F2075 /* Exeresice7Tests.xctest */,
+				DD4C946B1D40E917003F2075 /* Exeresice7UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD4C944F1D40E917003F2075 /* Exeresice7 */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C94501D40E917003F2075 /* AppDelegate.h */,
+				DD4C94511D40E917003F2075 /* AppDelegate.m */,
+				DD4C94A91D426AC0003F2075 /* Constants.h */,
+				DD4C94561D40E917003F2075 /* Assets.xcassets */,
+				DD4C94581D40E917003F2075 /* MainMenu.xib */,
+				DD4C945B1D40E917003F2075 /* Info.plist */,
+				DD4C94B51D466274003F2075 /* Visitor's window */,
+				DD4C94B11D465CC5003F2075 /* Custom Cells */,
+				DD4C94B01D465C9A003F2075 /* Table controllers */,
+				DD4C947D1D40E9CF003F2075 /* Model */,
+				DD4C94531D40E917003F2075 /* Supporting Files */,
+			);
+			path = Exeresice7;
+			sourceTree = "<group>";
+		};
+		DD4C94531D40E917003F2075 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C94541D40E917003F2075 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD4C94631D40E917003F2075 /* Exeresice7Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C94641D40E917003F2075 /* Exeresice7Tests.m */,
+				DD4C94661D40E917003F2075 /* Info.plist */,
+			);
+			path = Exeresice7Tests;
+			sourceTree = "<group>";
+		};
+		DD4C946E1D40E917003F2075 /* Exeresice7UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C946F1D40E917003F2075 /* Exeresice7UITests.m */,
+				DD4C94711D40E917003F2075 /* Info.plist */,
+			);
+			path = Exeresice7UITests;
+			sourceTree = "<group>";
+		};
+		DD4C947D1D40E9CF003F2075 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C94AA1D4273F1003F2075 /* MELLibrarySingleton.h */,
+				DD4C94AB1D4273F1003F2075 /* MELLibrarySingleton.m */,
+				DD4C947E1D40EA28003F2075 /* MELBook.h */,
+				DD4C947F1D40EA28003F2075 /* MELBook.m */,
+				DD4C94801D40EA28003F2075 /* MELBook+MELSerialization.h */,
+				DD4C94811D40EA28003F2075 /* MELBook+MELSerialization.m */,
+				DD4C94821D40EA28003F2075 /* MELLibrary.h */,
+				DD4C94831D40EA28003F2075 /* MELLibrary.m */,
+				DD4C94841D40EA28003F2075 /* MELLibrary+MELSerialization.h */,
+				DD4C94851D40EA28003F2075 /* MELLibrary+MELSerialization.m */,
+				DD4C94861D40EA28003F2075 /* MELSerializable.h */,
+				DD4C94871D40EA28003F2075 /* MELVisitor.h */,
+				DD4C94881D40EA28003F2075 /* MELVisitor.m */,
+				DD4C94891D40EA28003F2075 /* MELVisitor+MELSerialization.h */,
+				DD4C948A1D40EA28003F2075 /* MELVisitor+MELSerialization.m */,
+				DD4C948B1D40EA28003F2075 /* NSArray+MELEquality.h */,
+				DD4C948C1D40EA28003F2075 /* NSArray+MELEquality.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DD4C94B01D465C9A003F2075 /* Table controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C94A61D424EE2003F2075 /* MELBooksTableController.h */,
+				DD4C94A71D424EE2003F2075 /* MELBooksTableController.m */,
+				DD4C94A31D424EBF003F2075 /* MELVisitorsTableController.h */,
+				DD4C94A41D424EBF003F2075 /* MELVisitorsTableController.m */,
+				DD4C94C31D467BC2003F2075 /* MELBooksTableInVisitorWindow.h */,
+				DD4C94C41D467BC2003F2075 /* MELBooksTableInVisitorWindow.m */,
+			);
+			name = "Table controllers";
+			sourceTree = "<group>";
+		};
+		DD4C94B11D465CC5003F2075 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C94AD1D42958B003F2075 /* MELCellWithComboBox.h */,
+				DD4C94AE1D42958B003F2075 /* MELCellWithComboBox.m */,
+				DD4C94C61D467DFF003F2075 /* MELCellWithButton.h */,
+				DD4C94C71D467DFF003F2075 /* MELCellWithButton.m */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		DD4C94B51D466274003F2075 /* Visitor's window */ = {
+			isa = PBXGroup;
+			children = (
+				DD4C94B61D466309003F2075 /* MELVisitorWindowController.h */,
+				DD4C94B71D466309003F2075 /* MELVisitorWindowController.m */,
+				DD4C94B81D466309003F2075 /* MELVisitorWindowController.xib */,
+			);
+			name = "Visitor's window";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD4C944C1D40E917003F2075 /* Exeresice7 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4C94741D40E917003F2075 /* Build configuration list for PBXNativeTarget "Exeresice7" */;
+			buildPhases = (
+				DD4C94491D40E917003F2075 /* Sources */,
+				DD4C944A1D40E917003F2075 /* Frameworks */,
+				DD4C944B1D40E917003F2075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Exeresice7;
+			productName = Exeresice7;
+			productReference = DD4C944D1D40E917003F2075 /* Exeresice7.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD4C945F1D40E917003F2075 /* Exeresice7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4C94771D40E917003F2075 /* Build configuration list for PBXNativeTarget "Exeresice7Tests" */;
+			buildPhases = (
+				DD4C945C1D40E917003F2075 /* Sources */,
+				DD4C945D1D40E917003F2075 /* Frameworks */,
+				DD4C945E1D40E917003F2075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD4C94621D40E917003F2075 /* PBXTargetDependency */,
+			);
+			name = Exeresice7Tests;
+			productName = Exeresice7Tests;
+			productReference = DD4C94601D40E917003F2075 /* Exeresice7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD4C946A1D40E917003F2075 /* Exeresice7UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4C947A1D40E917003F2075 /* Build configuration list for PBXNativeTarget "Exeresice7UITests" */;
+			buildPhases = (
+				DD4C94671D40E917003F2075 /* Sources */,
+				DD4C94681D40E917003F2075 /* Frameworks */,
+				DD4C94691D40E917003F2075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD4C946D1D40E917003F2075 /* PBXTargetDependency */,
+			);
+			name = Exeresice7UITests;
+			productName = Exeresice7UITests;
+			productReference = DD4C946B1D40E917003F2075 /* Exeresice7UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD4C94451D40E917003F2075 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Александр Мелащенко";
+				TargetAttributes = {
+					DD4C944C1D40E917003F2075 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DD4C945F1D40E917003F2075 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DD4C944C1D40E917003F2075;
+					};
+					DD4C946A1D40E917003F2075 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DD4C944C1D40E917003F2075;
+					};
+				};
+			};
+			buildConfigurationList = DD4C94481D40E917003F2075 /* Build configuration list for PBXProject "Exeresice7" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD4C94441D40E917003F2075;
+			productRefGroup = DD4C944E1D40E917003F2075 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD4C944C1D40E917003F2075 /* Exeresice7 */,
+				DD4C945F1D40E917003F2075 /* Exeresice7Tests */,
+				DD4C946A1D40E917003F2075 /* Exeresice7UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD4C944B1D40E917003F2075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4C94BA1D466309003F2075 /* MELVisitorWindowController.xib in Resources */,
+				DD4C94571D40E917003F2075 /* Assets.xcassets in Resources */,
+				DD4C945A1D40E917003F2075 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4C945E1D40E917003F2075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4C94691D40E917003F2075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD4C94491D40E917003F2075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4C94911D40EA28003F2075 /* MELVisitor.m in Sources */,
+				DD4C948F1D40EA28003F2075 /* MELLibrary.m in Sources */,
+				DD4C94AC1D4273F1003F2075 /* MELLibrarySingleton.m in Sources */,
+				DD4C94A51D424EBF003F2075 /* MELVisitorsTableController.m in Sources */,
+				DD4C94C81D467DFF003F2075 /* MELCellWithButton.m in Sources */,
+				DD4C94551D40E917003F2075 /* main.m in Sources */,
+				DD4C94B91D466309003F2075 /* MELVisitorWindowController.m in Sources */,
+				DD4C948E1D40EA28003F2075 /* MELBook+MELSerialization.m in Sources */,
+				DD4C94C51D467BC2003F2075 /* MELBooksTableInVisitorWindow.m in Sources */,
+				DD4C94AF1D42958B003F2075 /* MELCellWithComboBox.m in Sources */,
+				DD4C94A81D424EE2003F2075 /* MELBooksTableController.m in Sources */,
+				DD4C94521D40E917003F2075 /* AppDelegate.m in Sources */,
+				DD4C94921D40EA28003F2075 /* MELVisitor+MELSerialization.m in Sources */,
+				DD4C94901D40EA28003F2075 /* MELLibrary+MELSerialization.m in Sources */,
+				DD4C94931D40EA28003F2075 /* NSArray+MELEquality.m in Sources */,
+				DD4C948D1D40EA28003F2075 /* MELBook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4C945C1D40E917003F2075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4C94651D40E917003F2075 /* Exeresice7Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD4C94671D40E917003F2075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4C94701D40E917003F2075 /* Exeresice7UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD4C94621D40E917003F2075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD4C944C1D40E917003F2075 /* Exeresice7 */;
+			targetProxy = DD4C94611D40E917003F2075 /* PBXContainerItemProxy */;
+		};
+		DD4C946D1D40E917003F2075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD4C944C1D40E917003F2075 /* Exeresice7 */;
+			targetProxy = DD4C946C1D40E917003F2075 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD4C94581D40E917003F2075 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4C94591D40E917003F2075 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD4C94721D40E917003F2075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DD4C94731D40E917003F2075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD4C94751D40E917003F2075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exeresice7/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MEL.Exeresice7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD4C94761D40E917003F2075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exeresice7/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MEL.Exeresice7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD4C94781D40E917003F2075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exeresice7Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MEL.Exeresice7Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exeresice7.app/Contents/MacOS/Exeresice7";
+			};
+			name = Debug;
+		};
+		DD4C94791D40E917003F2075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exeresice7Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MEL.Exeresice7Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exeresice7.app/Contents/MacOS/Exeresice7";
+			};
+			name = Release;
+		};
+		DD4C947B1D40E917003F2075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exeresice7UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MEL.Exeresice7UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Exeresice7;
+			};
+			name = Debug;
+		};
+		DD4C947C1D40E917003F2075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exeresice7UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MEL.Exeresice7UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Exeresice7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD4C94481D40E917003F2075 /* Build configuration list for PBXProject "Exeresice7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4C94721D40E917003F2075 /* Debug */,
+				DD4C94731D40E917003F2075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD4C94741D40E917003F2075 /* Build configuration list for PBXNativeTarget "Exeresice7" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4C94751D40E917003F2075 /* Debug */,
+				DD4C94761D40E917003F2075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD4C94771D40E917003F2075 /* Build configuration list for PBXNativeTarget "Exeresice7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4C94781D40E917003F2075 /* Debug */,
+				DD4C94791D40E917003F2075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD4C947A1D40E917003F2075 /* Build configuration list for PBXNativeTarget "Exeresice7UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4C947B1D40E917003F2075 /* Debug */,
+				DD4C947C1D40E917003F2075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD4C94451D40E917003F2075 /* Project object */;
+}
