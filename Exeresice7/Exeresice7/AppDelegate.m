@@ -28,12 +28,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
-    
+    [MELLibrarySingleton.sharedInstance saveData];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender

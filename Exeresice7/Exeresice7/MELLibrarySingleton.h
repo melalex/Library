@@ -16,4 +16,6 @@
 
 + (MELLibrarySingleton *) sharedInstance;
 
+- (void)saveData;
+
 @end

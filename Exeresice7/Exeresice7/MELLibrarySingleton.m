@@ -7,7 +7,9 @@
 //
 
 #import "MELLibrarySingleton.h"
-#import "MELLibrary+MELSerialization.h"
+#import "MELLibrary+MELCoding.h"
+
+static NSString *const kMELLibrary = @"MELLibrary";
 
 @interface MELLibrarySingleton()
 {
@@ -64,9 +66,27 @@ static MELLibrarySingleton *sharedSingleton_ = nil;
 {
     if (_library == nil)
     {
-        _library = [[MELLibrary alloc] initWithFilePath:@"/Users/melalex/Desktop/Projects/MyBook Exercise 4/library1.json"];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSData *libraryData = [defaults dataForKey:kMELLibrary];
+        
+        if (libraryData)
+        {
+            _library = [[NSKeyedUnarchiver unarchiveObjectWithData:libraryData] retain];
+        }
+        else
+        {
+            _library = [MELLibrary new];
+        }
+
     }
     return _library;
+}
+
+- (void)saveData
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:_library] forKey:kMELLibrary];
+    [defaults synchronize];
 }
 
 @end

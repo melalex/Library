@@ -64,7 +64,7 @@
 
 - (IBAction)yearFinishEditing:(id)sender
 {
-    self.visitor.yearOfBirth = [self.nameTextField.stringValue integerValue];
+    self.visitor.yearOfBirth = [self.yearTextField.stringValue integerValue];
 }
 
 - (void)setVisitor:(MELVisitor *)visitor
