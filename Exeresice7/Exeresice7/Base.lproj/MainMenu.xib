@@ -1045,6 +1045,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="deleteBook:" target="Voe-Tx-rLC" id="Te5-z3-ZEJ"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="Fa7-7U-anY">
                         <rect key="frame" x="22" y="378" width="65" height="32"/>
@@ -1053,6 +1056,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="addVisitor:" target="Voe-Tx-rLC" id="pd5-gX-7fY"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="QAf-pc-1qq">
                         <rect key="frame" x="114" y="378" width="80" height="32"/>
@@ -1061,6 +1067,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="deleteVisitor:" target="Voe-Tx-rLC" id="wKA-GX-tFN"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="J9W-2u-Jxt">
                         <rect key="frame" x="22" y="154" width="65" height="32"/>
@@ -1069,6 +1078,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="addBook:" target="Voe-Tx-rLC" id="Htx-YH-OA7"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

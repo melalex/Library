@@ -47,4 +47,7 @@ static NSString *const kMELLibraryDidChangeNotification = @"MELLibraryDidChangeN
 
 static NSString *const kMELVisitorWindowControllerDidChangeVisitorNotification = @"MELVisitorWindowControllerDidChangeVisitorNotification";
 
+static NSString *const kAppDelegateDidPressDeleteVisitorNotification = @"AppDelegateDidPressDeleteVisitorNotification";
+static NSString *const kAppDelegateDidPressDeleteBookNotification = @"AppDelegateDidPressDeleteBookNotification";
+
 #endif /* Constants_h */

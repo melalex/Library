@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "MELLibrary+MELSerialization.h"
+#import "MELLibrarySingleton.h"
+#import "Constants.h"
+#import "MELBook.h"
+#import "MELVisitor.h"
+#import "MELLibrary.h"
 #import "MELBooksTableController.h"
 #import "MELVisitorsTableController.h"
 
@@ -40,6 +44,26 @@
 - (void)dealloc
 {
     [super dealloc];
+}
+
+- (IBAction)addVisitor:(id)sender
+{
+    [MELLibrarySingleton.sharedInstance.library addVisitor:[MELVisitor createMELVisitorWithName:@"" lastName:@"" yearOfBirth:0]];
+}
+
+- (IBAction)deleteVisitor:(id)sender
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kAppDelegateDidPressDeleteVisitorNotification object:nil];
+}
+
+- (IBAction)addBook:(id)sender
+{
+    [MELLibrarySingleton.sharedInstance.library addBook:[MELBook bookWithName:@"" author:@"" type:kMELBookTypeUnknown]];
+}
+
+- (IBAction)deleteBook:(id)sender
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kAppDelegateDidPressDeleteBookNotification object:nil];
 }
 
 @end

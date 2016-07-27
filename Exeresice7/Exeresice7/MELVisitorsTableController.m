@@ -36,6 +36,11 @@
                                              selector:@selector(update)
                                                  name:kMELLibraryDidChangeNotification
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(deleteVisitor)
+                                                 name:kAppDelegateDidPressDeleteVisitorNotification
+                                               object:nil];
 
     [_visitorTableView setTarget:self];
     [self.visitorTableView setDoubleAction:@selector(doubleClickHandler)];
@@ -114,6 +119,16 @@
                          initWithWindowNibName:@"MELVisitorWindowController"];
     }
     return _visitorWindow;
+}
+
+- (void)deleteVisitor
+{
+    NSInteger row = self.visitorTableView.selectedRow;
+    if (row >= 0)
+    {
+        [MELLibrarySingleton.sharedInstance.library removeVisitor:(MELVisitor *)[MELLibrarySingleton.sharedInstance.library.visitors objectAtIndex:row]];
+
+    }
 }
 
 @end

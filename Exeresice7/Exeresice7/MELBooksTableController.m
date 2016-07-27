@@ -34,6 +34,12 @@
                                              selector:@selector(update)
                                                  name:kMELLibraryDidChangeNotification
                                                object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(deleteBook)
+                                                 name:kAppDelegateDidPressDeleteBookNotification
+                                               object:nil];
+    
     [_booksTableView setTarget:self];
     [self.booksTableView setDoubleAction:@selector(doubleClickHandler)];
 }
@@ -114,5 +120,14 @@
     [self.booksTableView reloadData];
 }
 
+- (void)deleteBook
+{
+    NSInteger row = self.booksTableView.selectedRow;
+    if (row >= 0)
+    {
+        [MELLibrarySingleton.sharedInstance.library removeBook:(MELBook *)[MELLibrarySingleton.sharedInstance.library.books objectAtIndex:row]];
+        
+    }
+}
 
 @end
